@@ -1,0 +1,9 @@
+.search-bar-container {
+  font-size: 1em;
+}
+
+.logo-container > p {
+  font-family: 'Oleo Script', cursive;
+  font-size: 2rem;
+  border-left: 1px solid black;
+}

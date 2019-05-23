@@ -1,10 +1,10 @@
-Step 1: In App.js, import our dummy-data and map over it. Pass the new array as a prop to <PostContainer>
+Step 1: In App.js, import our dummy-data and map over it. Pass the new array as a prop to <PostContainer> //Done
 
-Step 2: In PostContainer.js create the component that will be used to dynamically display our posts with the props it recieved 
+Step 2: In PostContainer.js create the component that will be used to dynamically display our posts with the props it recieved  //Done
 
-Step 3: In PostContainer.js, import and render CommentSection.js, and pass it the comments from our data as a prop
+Step 3: In PostContainer.js, import and render CommentSection.js, and pass it the comments from our data as a prop //Done
 
-Step 4: In CommentSection.js map over each comment recieved as a prop and display them properly on each post
+Step 4: In CommentSection.js map over each comment recieved as a prop and display them properly on each post //Dpne
 
 Step 5: Create and Render a SearchBar.js component
 

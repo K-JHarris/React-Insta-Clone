@@ -1,9 +1,8 @@
 import React from 'react'
 
 function CommentSection(props) {
-  console.log(props)
   return (
-    <div className="App">
+    <div>
       <p>{props.comments.username}</p>
       <p>{props.comments.text}</p>
     </div>
