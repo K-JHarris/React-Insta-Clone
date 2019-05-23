@@ -1,0 +1,13 @@
+.comment-section-container{
+  display: flex;
+}
+
+.comment-section-container > .user-name {
+  font-weight: bold;
+}
+
+.comment-section-container > p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}

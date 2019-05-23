@@ -19,12 +19,14 @@ function PostContainer(props) {
           </div>
 
         <p className="likes">{props.data.likes} likes</p>
-        <p>{props.data.timestamp}</p>
       </div>
 
       <div className="comment-section">
         {props.data.comments.map(comments => <CommentSection comments={comments} />)}
       </div>
+      <form className="add-comment-field">
+        <input type="text" placeholder="Add a comment.."/>
+      </form>
     </div>
   );
 }

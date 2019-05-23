@@ -3,6 +3,7 @@
   margin: 0 auto;
   border: 1px solid lightgray;
   text-align: left;
+  margin-bottom: 50px;
 }
 
 .user-header{
@@ -37,4 +38,23 @@
 
 .likes {
   font-weight: bold;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.add-comment-field {
+  width: 99.5%;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-top: 23px;
+}
+.add-comment-field > input {
+  border: none;
+  width: 95%;
+  height: 20px;;
+}
+
+.add-comment-field > input::placeholder {
+  text-align: left;
+  /* font-weight: bold; */
 }
