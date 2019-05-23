@@ -1,9 +1,45 @@
 .search-bar-container {
   font-size: 1em;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.logo-container {
+  display: flex;
 }
 
 .logo-container > p {
   font-family: 'Oleo Script', cursive;
+  text-align: center;
   font-size: 2rem;
+  margin-top: 1px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  padding-left: 20px;
   border-left: 1px solid black;
+}
+
+.search-field-container {
+  margin-top: 6px;
+}
+
+.search-input {
+  width: 200px;
+  height: 30px;
+}
+
+.ui-icon-container {
+  margin-top: 6px;
+  font-size: 1.8rem;
+}
+
+input::placeholder {
+  text-align: center;
+}
+.ui-icon-container > i {
+  margin-right: 32.5px;
 }
