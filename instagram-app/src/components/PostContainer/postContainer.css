@@ -1,0 +1,40 @@
+.post-container {
+  width: 640px;
+  margin: 0 auto;
+  border: 1px solid lightgray;
+  text-align: left;
+}
+
+.user-header{
+  display: flex;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.user-header > img{
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+.user-header > p {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.post-ui-container{
+ margin-left: 10px;
+ margin-top: 10px;
+}
+
+.post-ui-container > i{
+  padding-right: 20px;
+}
+
+.likes {
+  font-weight: bold;
+}

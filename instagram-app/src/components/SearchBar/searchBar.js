@@ -5,7 +5,7 @@ function SearchBar() {
   return (
     <div className="search-bar-container">
       <div className="logo-container">
-        <i class="fab fa-instagram fa-3x"></i>
+        <i className="fab fa-instagram fa-3x"></i>
         <p>Instagram</p>
       </div>
 
@@ -16,9 +16,9 @@ function SearchBar() {
       </div>
 
       <div className="ui-icon-container">
-        <i class="far fa-compass"></i>
-        <i class="far fa-heart"></i>
-        <i class="far fa-user"></i>
+        <i className="far fa-compass"></i>
+        <i className="far fa-heart"></i>
+        <i className="far fa-user"></i>
       </div>
 
     </div>
