@@ -3,6 +3,7 @@ import CommentSection from '../CommentSection/commentSection'
 import './postContainer.css'
 
 function PostContainer(props) {
+  // console.log(props.data.comments)
   return (
     <div className="post-container">
       <div className="user-header">
@@ -23,6 +24,7 @@ function PostContainer(props) {
 
       <div className="comment-section">
         {props.data.comments.map(comments => <CommentSection comments={comments} />)}
+        {/* <CommentSection comments={props.data.comments} /> */}
       </div>
       <form className="add-comment-field">
         <input type="text" placeholder="Add a comment.."/>
