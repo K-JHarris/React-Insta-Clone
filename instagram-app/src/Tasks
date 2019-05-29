@@ -1,3 +1,4 @@
+Day 1:
 Step 1: In App.js, import our dummy-data and map over it. Pass the new array as a prop to <PostContainer> //Done
 
 Step 2: In PostContainer.js create the component that will be used to dynamically display our posts with the props it recieved  //Done
@@ -12,6 +13,16 @@ Step 5: Properly label PropTypes for future bugfixing
 
 Stretch Problems:
 
-Stretch 1: Add the ability to comment on a post
+Stretch 1: Add the ability to comment on a post (this is MVP for day 2)
 
 Stetch 2: Use moment.js recieve a timestamp and properly format it as shown on the reference image
+
+Day 2:
+
+Step 1: Use React Lifecycle methods to mount your state data where needed //Done
+
+Step 2: Create and mount Comment Handler function
+
+Step 3: Implement like functionality
+
+Step 4: Implement Search funtionality

@@ -1,36 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react';
 import './commentSection.css'
+import PropTypes from 'prop-types'
 
-// const CommentSection = props =>{
-//   console.log(props)
-//   return(
-//     <div>
-//       <p className="user-name">{props.comments.username}</p>
-//       <p>{props.comments.text}</p>
-//     </div>
-//   )
-// }
-
-class CommentSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      comments: []
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ comments: this.props.comments });
-  }
-
-  render() {
+const CommentSection = props => {
     return (
-      <div className="comment-section-container">
-        <p className="user-name">{this.state.comments.username}</p>
-        <p>{this.state.comments.text}</p>
-      </div>
-    );
-  }
+        <div className="commentSectionContainer">
+            { props.comments.map(comment => (
+                <div className="commentContainer">
+                <p className="commentUserName">{comment.username}</p>
+                <p className="commentText">{comment.text}</p>
+            </div>
+          )) }
+          <form onSubmit={(event) => props.commentHandler(event, props.timestamp, {username: 'Khari!', text: props.commentInput})}>
+            <input onChange={props.commentChangeHandler} value={props.commentInput} className="commentInput" type="text" placeholder="Add a comment..."></input>
+          </form>
+        </div>
+    )
+};
+
+CommentSection.propTypes = {
+    username: PropTypes.string,
+    text: PropTypes.string
 }
 
 export default CommentSection;
