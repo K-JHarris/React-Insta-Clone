@@ -25,7 +25,7 @@ class PostContainer extends Component {
     }
 
     render() {
-    
+    console.log(this.props.data)
     return (
         <div className="postContainer">
             <div className="postHeader">

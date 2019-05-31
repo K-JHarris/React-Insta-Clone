@@ -11,7 +11,7 @@ const CommentSection = props => {
                 <p className="commentText">{comment.text}</p>
             </div>
           )) }
-          <form onSubmit={(event) => props.commentHandler(event, props.timestamp, {username: 'Khari!', text: props.commentInput})}>
+          <form onSubmit={(event) => props.commentHandler(event, props.timestamp, {username: 'khari', text: props.commentInput})}>
             <input onChange={props.commentChangeHandler} value={props.commentInput} className="commentInput" type="text" placeholder="Add a comment..."></input>
           </form>
         </div>

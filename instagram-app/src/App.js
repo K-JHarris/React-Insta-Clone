@@ -9,13 +9,13 @@ class App extends Component {
     super();
     this.state = {
       posts: [], //dummydata posts
-      filteredPosts: [], //filtered posts from dummydata
+      filteredPosts: null, //filtered posts from dummydata
       search: "" //param to search in posts and filter
     };
   }
 
   componentDidMount() {
-    this.setState({ posts: dummydata });
+    this.setState({ posts: dummydata }); //prevstate points here
   }
 
   commentHandler = (event, key, comment) => { 
@@ -31,13 +31,24 @@ class App extends Component {
     this.setState({ posts: newPosts }) 
   }
 
+  // searchPosts = e => { //BROKEN
+  //   e.preventDefault();
+  //   this.setState((prevState) => {
+  //     const filteredPostsArray=prevState.posts.filter(post => 
+  //       post.username.includes(prevState.search)
+  //     ) 
+  //     return this.state.filteredPosts = filteredPostsArray
+  //   }
+  // )
+  // };
+
   searchPosts = e => {
-    console.log(this.state.posts, this.state.filteredPosts)
     e.preventDefault();
-    this.setState((prevState) => {const filteredPostsArray=prevState.posts.filter(post => post.username.includes(prevState.search)) 
-      return {filteredPosts: filteredPostsArray}
+    this.setState({ 
+      filteredPosts: this.state.posts.find((posts) => posts.username === this.state.search
+      )
     }
-    )
+  )
   };
 
   inputHandler = event => {
@@ -46,7 +57,7 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.search)
+    console.log(this.state.filteredPosts)
     return (
       <div className="App">
         <div>
@@ -58,10 +69,10 @@ class App extends Component {
         </div>
 
         <div className="listItemContainer">
-          { this.state.filteredPosts.length > 0
-            ? this.state.filteredPosts.map(data => (
-              <PostContainer commentHandler={this.commentHandler} key={data.timestamp} data={data}/>
-          )) : 
+          { this.state.filteredPosts !==null
+            ?
+              <PostContainer commentHandler={this.commentHandler} data={this.state.filteredPosts}/>
+           : 
           this.state.posts.map(data => (
               <PostContainer commentHandler={this.commentHandler} key={data.timestamp} data={data}/>
           )) }
